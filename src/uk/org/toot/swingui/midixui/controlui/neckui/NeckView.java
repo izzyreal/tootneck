@@ -150,6 +150,7 @@ public class NeckView extends JComponent
 		SwingUtilities.invokeLater(new Runnable() {
             public void run() {
 		        Graphics g = getGraphics();
+		        if ( g == null ) return; // may be invalid by now
         		g.setColor(Color.white);
 		        g.drawLine(xfret(string.getFret()), ystring(str), getWidth()-42, ystring(str));
 		        g.setColor(Color.black);
